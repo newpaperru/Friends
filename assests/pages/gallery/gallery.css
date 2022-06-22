@@ -1,0 +1,26 @@
+@import url("../../../main.css");
+
+.main_page_rightSide-contents-gallery {
+	width: 100%;
+	height: auto;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	padding: 10px 15px;
+}
+
+.main_page_rightSide-contents-gallery-item {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.main_page_rightSide-contents-gallery-item img {
+	display: block;
+	width: 100%;
+	max-width: 400px;
+	height: 300px
+}
+
+.main_page_rightSide-contents-gallery-item {
+	margin-bottom: 20px;
+}
+
