@@ -743,7 +743,7 @@ a.gallery-item {
 }
 
 .main_page_rightSide-content-wall_12 {
-	padding: 15px 0 15px 15px;
+	padding: 15px 15px 15px 15px;
 }
 
 .main_page_rightSide-content-wall_title.bg_item {
@@ -767,13 +767,32 @@ a.gallery-item {
 	line-height: 1.6;
 }
 
+.main_page_rightSide-content-wall_12-img-data {
+	display: inline-block;
+}
+
 .main_page_rightSide-content-wall_12-img-data img {
-	max-width: 450px;
+	max-width: 100%;
 }
 
 .main_page_rightSide-content-wall_12-data {
 	color: white;
 	font-family:'Courier New', Courier, monospace;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.fav-btn, .fav-btn1 {
+	font-size: 22px;
+	color: gray;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+.fav-btn.active, .fav-btn1.active {
+	color: red;
 }
 
 /* footer */
