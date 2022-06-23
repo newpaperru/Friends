@@ -1,3 +1,10 @@
+// фунцкия принудительного скролла наверх при обновлении страницы
+history.scrollRestoration = "manual";
+
+$(window).on('beforeunload', function(){
+      $(window).scrollTop(0);
+});
+
 $(".gallery-list").magnificPopup ({
 	delegate: "a",
 	type: "image",
@@ -30,4 +37,14 @@ $(".main_page_rightSide-contents-gallery-item").magnificPopup ({
 	}
 });
 
+// лайки
+var btnHeart = document.querySelector(".fav-btn");
+var btnHeart1 = document.querySelector(".fav-btn1");
 
+btnHeart.addEventListener("click", () => {
+	btnHeart.classList.toggle("active");
+});
+
+btnHeart1.addEventListener("click", () => {
+	btnHeart1.classList.toggle("active");
+});
