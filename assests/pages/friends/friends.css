@@ -1,0 +1,137 @@
+@import url("../../../main.css");
+:root {
+  --black: #3a3a3a;
+  --white: #fff;
+  --green: #1abc25;
+	--gray:  #292929;
+	--lightblue: #5c9ce6;
+}
+
+.main_page_rightSide-contents-friends {
+	width: 100%;
+	height: auto;
+}
+
+.main_page_rightSide-contents-friends-offOnline {
+	width: 100%;
+	background: var(--gray);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.filters {
+  text-align: center;
+	margin: 10px 0;
+}
+
+.filters * {
+  display: inline-block;
+}
+
+.filters label {
+	color: var(--white);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	padding: 0.5rem 1rem;
+	margin-bottom: 0.25rem;
+	cursor: pointer;
+	transition: all 0.1s;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.filters label:hover {
+	color: var(--lightblue);
+}
+
+.posts {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.post {
+	border-top: rgba(225, 227, 230, 0.5) 1px solid;
+	width: 100%;
+	height: 150px;
+	margin-bottom: 20px;
+	list-style-type: none;
+}
+
+.post figure {
+	display: flex;
+	margin-top: 20px;
+}
+
+.post a {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.FigOnline {
+	position: relative;
+}
+
+.FigOnline::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	right: 10px;
+	bottom: 15px;
+	display: block;
+	background: var(--green);
+	border-radius: 50%;
+	position: absolute;
+}
+
+.posts img {
+	width: 125px;
+	height: 125px;
+	border-radius: 50%;
+}
+
+.posts .post-categories * {
+  display: inline-block;
+}
+
+.post-title, .post-write {
+	color: #e1e3e6;
+	margin-top: 20px;
+	margin-left: 30px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin-bottom: 10px;
+	font-size: 22px;
+	word-spacing: 4px;
+}
+
+.post-write {
+	color: var(--lightblue);
+	font-size: 18px;
+}
+
+.post-title a:hover, .post-write a:hover {
+	text-decoration: underline;
+}
+
+
+
+
+/* FILTERING RULES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+	[value="ALL"]:checked~.filters [for="ALL"],
+	[value="Online"]:checked~.filters [for="Online"] {
+		color: var(--lightblue);
+	}
+	
+	[value="ALL"]:checked~.posts [data-category] {
+		display: block;
+	}
+	
+	[value="Online"]:checked~.posts .post:not([data-category~="Online"]) {
+		display: none;
+	}
